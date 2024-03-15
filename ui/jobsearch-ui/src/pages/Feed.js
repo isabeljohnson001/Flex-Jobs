@@ -11,6 +11,7 @@ import {
   import React, { useEffect, useState } from "react";
   import SearchIcon from "@mui/icons-material/Search";
   import { Link } from "react-router-dom";
+  import getApiUrl from './apiConfig';
   
   const Feed = () => {
     const [query, setQuery] = useState("");
@@ -19,11 +20,11 @@ import {
     //
     useEffect(() => {
       const fetchPosts = async () => {
-        const response = await axios.get(`https://vacuous-truck-production.up.railway.app/posts/${query}`);
+        const response = await axios.get(`${getApiUrl()}/posts/${query}`);
         setPost(response.data);
       };
       const fetchInitialPosts = async () => {
-          const response = await axios.get(`https://vacuous-truck-production.up.railway.app/allPosts`);
+          const response = await axios.get(`${getApiUrl()}/allPosts`);
           console.log(response);
           setPost(response.data);
       }

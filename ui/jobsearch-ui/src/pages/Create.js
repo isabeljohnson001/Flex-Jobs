@@ -1,3 +1,5 @@
+
+import getApiUrl from './apiConfig';
 import React, { useState } from "react";
 import {
   Typography,
@@ -32,7 +34,7 @@ const Create = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("https://vacuous-truck-production.up.railway.app/post", {
+    fetch("${getApiUrl()}/post", {
       method: "POST", // or 'PUT'
       headers: {
         "Content-Type": "application/json",
