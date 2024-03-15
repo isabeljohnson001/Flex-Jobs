@@ -1,5 +1,5 @@
 
-import getApiUrl from './apiConfig';
+import getApiUrl from '../apiConfig';
 import React, { useState } from "react";
 import {
   Typography,

@@ -11,7 +11,7 @@ import {
   import React, { useEffect, useState } from "react";
   import SearchIcon from "@mui/icons-material/Search";
   import { Link } from "react-router-dom";
-  import getApiUrl from './apiConfig';
+  import getApiUrl from '../apiConfig';
   
   const Feed = () => {
     const [query, setQuery] = useState("");
